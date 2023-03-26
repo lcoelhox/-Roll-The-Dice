@@ -10,6 +10,8 @@ A aplicação foi contruida em JavaScript, sendo o FrameWork React para o front 
 - React
 - Jest
 - Docker
+- CSS
+- Context
 
 ## Testando com Docker :whale2:
 1. Clone o repositório `git@github.com:lcoelhox/Fast-Double-Click.git`
