@@ -8,7 +8,7 @@ const FILE_NAME = 'listOfRecords.json';
 let listOfRecords = [];
 
 if (fs.existsSync(FILE_NAME)) {
-  const fileContents = fs.readFileSync(FILE_NAME, 'utf8'); // Especifica a codificação do arquivo lido
+  const fileContents = fs.readFileSync(FILE_NAME, 'utf8');
   listOfRecords = JSON.parse(fileContents);
 }
 
@@ -25,9 +25,9 @@ router.post('/', (req, res) => {
   fs.writeFile(FILE_NAME, JSON.stringify(listOfRecords), (err) => {
     if (err) {
       console.error(err);
-      res.status(500).send('Erro ao salvar registro');
+      res.status(500).send('Error saving record');
     } else {
-      res.status(201).send('Registro salvo com sucesso');
+      res.status(201).send('Record successfully saved');
     }
   });
 });
