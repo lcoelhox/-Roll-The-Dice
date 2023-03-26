@@ -4,7 +4,7 @@
 Desafio técnico de uma aplicação Fullstack, onde o usuário clica em um botão duas vezes, e o sistema calcula o intervalo entre os clicks e a data e hora que foram salvos, a segunda pagina é lista todos os intervalos, sendo possível filtrar por data e hora, tempo, ascendente e decrescente!
 A aplicação foi contruida em JavaScript, sendo o FrameWork React para o front e NodeJS para o back, realizei os testes em Jest, e subi a aplicação em containers docker
 
-## Stacks e utilizadas
+## Stacks utilizadas
 - JavaScript
 - NodeJS
 - React
