@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -11,7 +10,6 @@ export default function ListRecords() {
   const [endDate, setEndDate] = useState('');
   const [orderBy, setOrderBy] = useState('time');
   const [order, setOrder] = useState('asc');
-
 
   useEffect(() => {
     axios.get(API_URL_RECORDS)
@@ -33,15 +31,18 @@ export default function ListRecords() {
   
     if (start.getTime() === end.getTime()) {
       return records.filter(record => {
+        console.log('records', records)
         const recordDate = new Date(record.date);
         return recordDate
       });
     }
     
-    return records.filter(record => {
+    const filteredRecords = records.filter(record => {
       const recordDate = new Date(record.date);
       return recordDate >= start && recordDate <= end;
     });
+
+    return filteredRecords.length > 0 ? filteredRecords : records;
   };
 
   const sortRecords = (records) => {
@@ -80,6 +81,7 @@ export default function ListRecords() {
     axios.delete(API_URL_RECORDS)
       .then(response => {
         setRecords([]);
+        console.log(setRecords)
       })
       .catch(err => {
         console.error(err);
@@ -126,4 +128,3 @@ export default function ListRecords() {
     </div>
   );
 }
-

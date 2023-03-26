@@ -5,25 +5,27 @@ const router = Router();
 
 const FILE_NAME = 'listOfRecords.json';
 
-router.get('/records', (_req, res) => {
+router.get('/', (_req, res) => {
   fs.readFile(FILE_NAME, 'utf8', (err, data) => {
     if (err) {
       console.error(err);
-      res.status(500).send('Erro ao ler arquivo de registros');
+      res.status(500).send('Error reading log file');
     } else {
-      const registros = JSON.parse(data);
-      res.status(200).send(registros);
+      const records = JSON.parse(data);
+      res.status(200).send(records);
     }
   });
 });
 
-router.delete('/records', (_req, res) => {
+router.delete('/', (_req, res) => {
   fs.readFile(FILE_NAME, () => {
-    const newRegistros = [];
+    const newRecord = [];
 
-    fs.writeFile(FILE_NAME, JSON.stringify(newRegistros), err => {
+    fs.writeFile(FILE_NAME, JSON.stringify(newRecord), err => {
       if (err) throw err;
-      res.send('Registros excluídos com sucesso!');
+      res.status(204).send('Records deleted successfully');
     });
   });
 });
+
+module.exports = router;
