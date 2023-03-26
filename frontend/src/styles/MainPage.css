@@ -1,0 +1,31 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.button-double-click {
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  width: 30%;
+  margin-top: 25px;
+}
+
+.button-double-click.active button {
+  background-color: red;
+  color: white;
+  border: red;
+}
+
+#btn1 {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#btn-redirect {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.button-redirect {
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  width: 90px;
+  margin-top: 45px;
+}

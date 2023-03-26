@@ -1,0 +1,125 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+/* Importação do CSS do Bootstrap */
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+
+/* Estilos personalizados */
+h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+input {
+  margin-right: 10px;
+}
+
+select {
+  margin-right: 10px;
+}
+
+button {
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.link-buttons {
+  margin-top: 20px;
+}
+
+.constainer-filters {
+  display: flex;
+  justify-content: center;
+}
+
+.title-h1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.button-filter {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.label-oder-by {
+  font-size: 22px;
+}
+
+.label-end-date {
+  font-size: 22px;
+}
+
+.label-start-date {
+  font-size: 22px;
+}
+
+.label-order {
+  font-size: 22px;
+}
+
+#btn-filter {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 25%;
+  font-size: 25px;
+}
+
+#startDate {
+  width: 12%;
+}
+
+#endDate {
+  width: 12%;
+}
+
+#orderBy {
+  width: 10%;
+}
+
+#order {
+  width: 5%;
+}
+
+.container-btn-clear {
+  display: flex;
+  justify-content: center;
+}
+
+#btn-clear {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  width: 185px;
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+.container-list-record {
+  font-size: 22px;
+}
+
+#btn-home {
+  display: flex;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 80px;
+  font-size: 20px;
+  margin-left: 10px;
+}
