@@ -1,9 +1,0 @@
-services:
-  app:
-    env:
-      NODE_ENV: "production"
-    commands:
-      - "npm install"
-      - "npm run build"
-      - "npm start"
-    port: 3001
