@@ -2,7 +2,6 @@ import { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { API_URL_HOME } from '../utils/strings';
-import { format } from 'date-fns';
 import '../styles/MainPage.css';
 
 export default function MainPage() {
@@ -10,14 +9,12 @@ export default function MainPage() {
   const [active, setActive] = useState(false);
 
   const handleButtonClick = () => {
-    const date = new Date().getTime()
-    const formartDate = format(date, 'dd/MM/yyyy HH:mm:ss');
 
     if (lastClickTime === null) {
-      setLastClickTime(formartDate);
+      setLastClickTime(new Date().getTime());
       setActive(true);
     } else {
-      const currentTime = formartDate;
+      const currentTime = new Date().getTime();
       const time = currentTime - lastClickTime;
 
       axios.post(API_URL_HOME, { time })
