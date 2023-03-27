@@ -20,7 +20,6 @@ describe('Testing back-end', () => {
 
   it('Must delete all records from JSON file', async () => {
     const response = await request(app).delete('/records');
-    expect(response.statusCode).to.equal(202);
-    expect(response.text).to.equal('Record successfully saved');
+    expect(response.statusCode).to.equal(204);
   });
 });

@@ -4,7 +4,7 @@
   "description": "fast-double-click",
   "main": "api/server.js",
   "scripts": {
-    "test": "mocha tests/**/*$NAME*.test.js --exit",
+    "test": "mocha tests/**/*.test.js --exit",
     "start": "node .",
     "dev": "nodemon ."
   },
