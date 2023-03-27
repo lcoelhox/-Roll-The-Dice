@@ -28,6 +28,10 @@ export default function ListRecords() {
   
     const start = new Date(startDate);
     const end = new Date(endDate);
+
+    if (isNaN(start.getTime()) || isNaN(end.getTime())) {
+      return [];
+    }
   
     if (start.getTime() === end.getTime()) {
       return records.filter(record => {
