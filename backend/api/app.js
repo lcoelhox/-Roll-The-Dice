@@ -3,7 +3,7 @@ const cors = require('cors');
 const { HomeRouter, ReacordsRouter }= require('./routes');
 
 const app = express();
-app.use(cors());
+app.use(cors()); // segurança
 app.use(express.json());
 
 app.use('/', HomeRouter)
