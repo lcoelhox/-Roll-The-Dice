@@ -22,12 +22,12 @@ router.post('/', (req, res) => {
 
   listOfRecords.push(record);
 
-  fs.writeFile(FILE_NAME, JSON.stringify(listOfRecords), (err) => {
-    if (err) {
+  fs.writeFile(FILE_NAME, JSON.stringify(listOfRecords), () => {
+    try {
+      res.status(201).send('Record successfully saved');
+    } catch (err) {
       console.error(err);
       res.status(500).send('Error saving record');
-    } else {
-      res.status(201).send('Record successfully saved');
     }
   });
 });

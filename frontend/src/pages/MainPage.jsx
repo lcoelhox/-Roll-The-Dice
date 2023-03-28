@@ -19,7 +19,6 @@ export default function MainPage() {
 
       axios.post(API_URL_HOME, { time })
         .then(response => {
-          console.log(response.data);
           setLastClickTime(null);
           setActive(false);
         })
@@ -40,7 +39,7 @@ export default function MainPage() {
               className="btn btn-primary btn-lg btn-block"
               id="btn1"
               onClick={handleButtonClick}>Double Click</button>
-          </div>
+            </div>
         </div>
         <div className="row justify-content-center mt-3">
           <div className="button-redirect">
